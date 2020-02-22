@@ -1,0 +1,12 @@
+[package]
+name = "actor_demo"
+version = "0.1.0"
+authors = ["0h-n0 <kbu94982@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix = "0.9.0"
+futures = "0.3.4"
+tokio = "0.2.11"
