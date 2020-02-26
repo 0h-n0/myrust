@@ -23,6 +23,13 @@ impl<T> LinkedList<T> {
             })),
         }
     }
+    fn pop(&mut self) -> T {
+        let old = std::mem::replace(
+            &mut self.head,
+            Some(*self.head.unwrap().next.as_ref().unwrap()),
+        );
+        old.unwrap().data
+    }
 }
 
 fn main() {
@@ -30,5 +37,7 @@ fn main() {
     println!("nums: {:?}", list_of_nums);
 
     let list_of_strs = LinkedList::new().append("foo").append("bar");
+    println!("strs: {:?}", list_of_strs);
+    println!("strs: {:?}", list_of_strs.pop());
     println!("strs: {:?}", list_of_strs);
 }
